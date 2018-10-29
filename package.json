@@ -1,13 +1,18 @@
 {
-  "name": "laravel-file-manager",
+  "name": "gameap-file-manager",
   "version": "2.0.3",
-  "description": "File manager for Laravel",
+  "description": "File manager for Laravel/GameAP",
   "keywords": [
     "laravel",
     "file",
-    "manager"
+    "manager",
+    "gameap"
   ],
   "author": "Aleksandr Manekin <alexusmai@gmail.com>",
+  "contributors": [
+    "Aleksandr Manekin <alexusmai@gmail.com>",
+    "Nikita Kuznetsov <nikita.hldm@gmail.com>"
+  ],
   "private": false,
   "license": "MIT",
   "main": "src/init.js",

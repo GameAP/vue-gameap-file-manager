@@ -1,10 +1,10 @@
 # laravel-file-manager (Frontend)
 
-> File manager for Laravel - Frontend - Vue.js 
+> File manager for Laravel/GameAP - Frontend - Vue.js 
 
-> Backend - Laravel 5 package - [alexusmai/laravel-file-manager](https://github.com/alexusmai/laravel-file-manager)
+> Backend - Laravel 5 package - [gameap/laravel-file-manager](https://github.com/gameap/laravel-file-manager)
 
-![Laravel File Manager](https://raw.github.com/alexusmai/vue-laravel-file-manager/master/src/assets/laravel-file-manager.gif?raw=true)
+![Laravel File Manager](https://raw.github.com/gameap/vue-gameap-file-manager/master/src/assets/laravel-file-manager.gif?raw=true)
 
 # v 2.0.0
 
@@ -18,7 +18,7 @@
 
 ### NPM
 ```
-$ npm install laravel-file-manager --save
+$ npm install gameap-file-manager --save
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ $ npm install laravel-file-manager --save
 **IF** your App using Vuex store
 
 ```
-import FileManager from 'laravel-file-manager'
+import FileManager from 'gameap-file-manager'
 import store from './path-to-your-store/store'   // your Vuex store
 
 Vue.use(FileManager, {store})
@@ -37,7 +37,7 @@ Vue.use(FileManager, {store})
 ```
 import Vue from 'vue';
 import Vuex from 'vuex';
-import FileManager from 'laravel-file-manager'
+import FileManager from 'gameap-file-manager'
 
 Vue.use(Vuex);
 
