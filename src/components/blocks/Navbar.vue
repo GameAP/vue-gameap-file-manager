@@ -36,13 +36,13 @@
                             disabled
                             v-if="uploading"
                             v-bind:title="lang.btn.upload">
-                        <i class="fas fa-download"></i>
+                        <i class="fas fa-upload"></i>
                     </button>
                     <button type="button" class="btn btn-secondary"
                             v-else
                             v-on:click="showModal('Upload')"
                             v-bind:title="lang.btn.upload">
-                        <i class="fas fa-download"></i>
+                        <i class="fas fa-upload"></i>
                     </button>
                     <button type="button" class="btn btn-secondary"
                             v-on:click="showModal('Delete')"
