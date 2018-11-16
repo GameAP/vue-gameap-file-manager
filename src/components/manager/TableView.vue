@@ -70,7 +70,7 @@
                     <td class="fm-content-item unselectable">
                         <i class="far"
                            v-bind:class="extensionToIcon(file.extension)"></i>
-                        {{ file.filename ? file.filename : file.basename }}
+                        {{ file.basename }}
                     </td>
                     <td>{{ bytesToHuman(file.size) }}</td>
                     <td>
