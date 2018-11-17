@@ -1,8 +1,8 @@
-# laravel-file-manager (Frontend)
+# gameap-file-manager (Frontend)
 
 > File manager for Laravel/GameAP - Frontend - Vue.js 
 
-> Backend - Laravel 5 package - [gameap/laravel-file-manager](https://github.com/gameap/laravel-file-manager)
+> Backend - Laravel 5 package - [gameap/laravel-file-manager](https://github.com/gameap/gameap-file-manager)
 
 ![Laravel File Manager](https://raw.github.com/gameap/vue-gameap-file-manager/master/src/assets/laravel-file-manager.gif?raw=true)
 
@@ -81,7 +81,7 @@ MIX_LFM_BASE_URL=http://my-url.loc/file-manager/
 
 Now vue component is registered and you can use it in your app
 ```
-<file-manager></file-manager>
+<file-manager server-id="SERVER_ID"></file-manager>
 ```
 
 Don't forget add a csrf token to head block in your Laravel view and add bootstrap 4 and fontawesome 5 styles

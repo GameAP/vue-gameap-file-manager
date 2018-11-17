@@ -65,7 +65,7 @@ export default {
    * @param path
    */
   getLoadContent(context, { manager, disk, path }) {
-    GET.content(disk, path).then((response) => {
+    GET.content(context.rootState.fm.serverId, disk, path).then((response) => {
       if (response.data.result.status === 'success') {
         context.commit(`${manager}/setDirectoryContent`, response.data);
       }
@@ -220,7 +220,7 @@ export default {
     };
 
     // upload files
-    return POST.upload(data, config).then((response) => {
+    return POST.upload(context.rootState.fm.serverId, data, config).then((response) => {
       // clear progress
       commit('messages/clearProgress');
 

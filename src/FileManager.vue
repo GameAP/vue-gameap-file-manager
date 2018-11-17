@@ -48,6 +48,7 @@ import Notification from './components/blocks/Notification.vue';
 
 export default {
   name: 'FileManager',
+  props: ['serverId'],
   components: {
     Navbar,
     FolderTree,
@@ -181,6 +182,7 @@ export default {
     },
   },
 };
+
 </script>
 
 <style lang="scss">
