@@ -41,11 +41,10 @@ export default {
 
 <style lang="scss">
     .fm-content {
-        height: 100%;
         padding-left: 1rem;
 
         .fm-content-body {
-            overflow: auto;
+            overflow-y: scroll;
         }
     }
 </style>
