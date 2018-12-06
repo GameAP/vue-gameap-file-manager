@@ -68,6 +68,7 @@ export default {
     }),
   },
   created() {
+    this.$store.state.fm.settings.serverId = this.serverId;
     // init base url
     this.$store.commit('fm/settings/initBaseUrl');
 
@@ -182,7 +183,6 @@ export default {
     },
   },
 };
-
 </script>
 
 <style lang="scss">

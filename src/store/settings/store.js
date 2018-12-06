@@ -19,6 +19,9 @@ export default {
       // overwrite default URL
       baseUrl: null,
 
+      // Game server id
+      serverId: null,
+
       /**
        * File manager windows configuration
        * 1 - only one file manager window

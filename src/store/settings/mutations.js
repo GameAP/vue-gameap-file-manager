@@ -52,6 +52,8 @@ export default {
 
         state.baseUrl = baseUrl;
       }
+
+      state.baseUrl += `${state.serverId}/`;
     }
   },
 
