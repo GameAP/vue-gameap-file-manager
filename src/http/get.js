@@ -5,8 +5,8 @@ export default {
    * Get configuration data from server
    * @returns {AxiosPromise<any>}
    */
-  initialize(serverId) {
-    return HTTP.get(serverId + '/initialize');
+  initialize() {
+    return HTTP.get('initialize');
   },
 
   /**

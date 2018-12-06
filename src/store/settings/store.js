@@ -134,6 +134,7 @@ export default {
         js: 'text/javascript',
         ts: 'text/typescript',
         vue: 'text/x-vue',
+        json: 'application/json',
         // text
         htaccess: 'text/plain',
         env: 'text/plain',
