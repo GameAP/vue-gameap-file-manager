@@ -45,6 +45,7 @@ export default {
 
         .fm-content-body {
             overflow-y: scroll;
+            height: 600px;
         }
     }
 </style>

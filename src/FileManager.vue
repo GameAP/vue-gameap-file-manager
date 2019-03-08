@@ -206,8 +206,6 @@ export default {
     }
 
     .fm-body {
-      max-height: 600px;
-      height: 600px;
       position: relative;
       padding-top: 1rem;
       padding-bottom: 1rem;
