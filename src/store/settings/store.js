@@ -140,6 +140,7 @@ export default {
         env: 'text/plain',
         txt: 'text/plain',
         ini: 'text/x-ini',
+        cfg: 'text/plain',
         xml: 'application/xml',
         md: 'text/x-markdown',
         // c-like
