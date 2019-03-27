@@ -141,6 +141,7 @@ export default {
         txt: 'text/plain',
         ini: 'text/x-ini',
         xml: 'application/xml',
+        cfg: 'text/plain',
         md: 'text/x-markdown',
         // c-like
         java: 'text/x-java',
