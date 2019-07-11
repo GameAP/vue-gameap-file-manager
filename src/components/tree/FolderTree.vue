@@ -32,6 +32,18 @@ export default {
         overflow: auto;
         border-right: 1px solid #6d757d;
 
+        @media screen and (min-height: 800px) {
+          height: 550px;
+        }
+
+        @media screen and (max-height: 800px) {
+          height: 420px;
+        }
+
+        @media screen and (max-height: 600px) {
+          height: 350px;
+        }
+
         & > .fm-folders-tree {
             padding-left: 0.2rem;
         }
