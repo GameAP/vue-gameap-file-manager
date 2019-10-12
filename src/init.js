@@ -1,5 +1,9 @@
 import store from './store';
-import FileManager from './FileManager.vue';
+
+/* Fix https://github.com/JeffreyWay/laravel-mix/issues/2064#issuecomment-511364566 */
+import blank from './blank.scss';
+
+const FileManager = () => import('./FileManager' /* webpackChunkName: "js/file-manager" */);
 
 /**
  * Install
