@@ -176,6 +176,7 @@ export default {
                 log: 'text/plain',
                 ini: 'text/x-ini',
                 xml: 'application/xml',
+                cfg: 'text/plain',
                 md: 'text/x-markdown',
                 // c-like
                 java: 'text/x-java',
@@ -195,6 +196,7 @@ export default {
                 go: 'text/x-go',
                 yaml: 'text/x-yaml',
                 json: 'application/json',
+                properties: 'text/plain',
             },
         };
     },

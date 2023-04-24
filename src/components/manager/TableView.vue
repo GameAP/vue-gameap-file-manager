@@ -69,7 +69,7 @@
                 >
                     <td class="fm-content-item unselectable" v-bind:class="acl && file.acl === 0 ? 'text-hidden' : ''">
                         <i class="bi" v-bind:class="extensionToIcon(file.extension)" />
-                        {{ file.filename ? file.filename : file.basename }}
+                        {{ file.basename }}
                     </td>
                     <td>{{ bytesToHuman(file.size) }}</td>
                     <td>

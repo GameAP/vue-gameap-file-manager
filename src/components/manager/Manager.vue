@@ -44,7 +44,17 @@ export default {
     padding-left: 1rem;
 
     .fm-content-body {
-        overflow: auto;
+        overflow-y: scroll;
+
+        @media screen and (min-height: 800px) {
+            height: 550px;
+        }
+        @media screen and (max-height: 800px) {
+            height: 420px;
+        }
+        @media screen and (max-height: 600px) {
+            height: 350px;
+        }
     }
 }
 </style>

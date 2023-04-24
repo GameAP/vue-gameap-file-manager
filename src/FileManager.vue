@@ -260,6 +260,8 @@ export default {
     }
 
     .fm-body {
+        max-height: 600px;
+        height: 600px;
         flex: 1 1 auto;
         overflow: hidden;
         position: relative;
