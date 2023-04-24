@@ -1,11 +1,12 @@
 {
-  "name": "laravel-file-manager",
-  "version": "3.0.3",
-  "description": "File manager for Laravel",
+  "name": "gameap-file-manager",
+  "version": "3.0.0",
+  "description": "File manager for Laravel/GameAP",
   "keywords": [
     "laravel",
     "file",
-    "manager"
+    "manager",
+    "gameap"
   ],
   "author": "Aleksandr Manekin <alexusmai@gmail.com>",
   "contributors": [
