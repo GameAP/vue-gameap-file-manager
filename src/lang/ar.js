@@ -69,7 +69,7 @@ const ar = {
     modal: {
         about: {
             developer: 'مطور',
-            name: 'Laravel File Manager',
+            name: 'GameAP File Manager',
             title: 'حول',
             version: 'الإصدار',
         },

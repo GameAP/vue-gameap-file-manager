@@ -70,7 +70,7 @@ const hu = {
     modal: {
         about: {
             developer: 'Developer',
-            name: 'Laravel File Manager',
+            name: 'GameAP File Manager',
             title: 'About',
             version: 'Version',
         },

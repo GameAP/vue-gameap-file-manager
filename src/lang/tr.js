@@ -69,7 +69,7 @@ const tr = {
     modal: {
         about: {
             developer: 'Geliştirici',
-            name: 'Laravel File Manager',
+            name: 'GameAP File Manager',
             title: 'Hakkında',
             version: 'Sürüm',
         },

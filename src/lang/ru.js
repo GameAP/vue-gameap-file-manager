@@ -69,7 +69,7 @@ const ru = {
     modal: {
         about: {
             developer: 'Разработчик',
-            name: 'Laravel File Manager',
+            name: 'GameAP File Manager',
             title: 'О программе',
             version: 'Версия',
         },

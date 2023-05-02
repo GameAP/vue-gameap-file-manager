@@ -70,7 +70,7 @@ const pt_BR = {
     modal: {
         about: {
             developer: 'Desenvolvedor',
-            name: 'Laravel File Manager',
+            name: 'GameAP File Manager',
             title: 'Sobre',
             version: 'Versão',
         },

@@ -14,14 +14,17 @@
                 <dt class="col-3">{{ lang.modal.about.developer }}:</dt>
                 <dd class="col-9">Aleksandr Manekin (alexusmai@gmail.com)</dd>
 
+                <dt class="col-3">{{ lang.modal.about.developer }}:</dt>
+                <dd class="col-9">Nikita Kuznetsov (nikita.hldm@gmail.com)</dd>
+
                 <dt class="col-3">GitHub:</dt>
                 <dd class="col-9">
-                    <a href="https://github.com/alexusmai/laravel-file-manager" target="_blank">
-                        alexusmai/laravel-file-manager
+                    <a href="https://github.com/gameap/gameap-file-manager" target="_blank">
+                        gameap/gameap-file-manager
                     </a>
                     <br />
-                    <a href="https://github.com/alexusmai/vue-laravel-file-manager" target="_blank">
-                        alexusmai/vue-laravel-file-manager
+                    <a href="gameap/vue-gameap-file-manager" target="_blank">
+                        gameap/vue-laravel-file-manager
                     </a>
                 </dd>
             </dl>

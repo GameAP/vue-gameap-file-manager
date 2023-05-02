@@ -70,7 +70,7 @@ const sr = {
     modal: {
         about: {
             developer: 'Razvio',
-            name: 'Laravel File Manager',
+            name: 'GameAP File Manager',
             title: 'O Nama',
             version: 'Verzija',
         },
