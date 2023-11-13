@@ -1,7 +1,7 @@
 <template>
     <div class="fm-navbar mb-3">
         <div class="row justify-content-between">
-            <div class="col-auto">
+            <div class="col-auto mb-2">
                 <div class="btn-group" role="group">
                     <button
                         type="button"

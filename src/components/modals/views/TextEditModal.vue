@@ -11,9 +11,9 @@
             <div v-if="codeLoaded">
                 <codemirror
                     ref="fmCodeEditor"
-                    v-bind:value="code"
-                    v-bind:options="cmOptions"
-                    v-bind:height="editorHeight"
+                    v-model="code"
+                    :style="{ height: editorHeight + 'px' }"
+                    :extensions="extensions"
                     v-on:change="onChange"
                 />
             </div>
@@ -35,26 +35,12 @@
 </template>
 
 <script>
-import Codemirror from 'codemirror-editor-vue3';
-import 'codemirror/mode/shell/shell';
-import 'codemirror/mode/css/css';
-import 'codemirror/mode/sass/sass';
-import 'codemirror/mode/htmlmixed/htmlmixed';
-import 'codemirror/mode/javascript/javascript';
-import 'codemirror/mode/vue/vue';
-import 'codemirror/mode/markdown/markdown';
-import 'codemirror/mode/xml/xml';
-import 'codemirror/mode/clike/clike';
-import 'codemirror/mode/php/php';
-import 'codemirror/mode/sql/sql';
-import 'codemirror/mode/lua/lua';
-import 'codemirror/mode/perl/perl';
-import 'codemirror/mode/python/python';
-import 'codemirror/mode/swift/swift';
-import 'codemirror/mode/ruby/ruby';
-import 'codemirror/mode/go/go';
-import 'codemirror/mode/yaml/yaml';
-import 'codemirror/mode/properties/properties';
+import { Codemirror } from 'vue-codemirror'
+import { javascript } from '@codemirror/lang-javascript'
+import { xml } from '@codemirror/lang-xml'
+import { json } from "@codemirror/lang-json";
+import { oneDark } from '@codemirror/theme-one-dark'
+
 import modal from '../mixins/modal';
 import translate from '../../../mixins/translate';
 
@@ -65,6 +51,7 @@ export default {
     data() {
         return {
             code: '',
+            extensions: [javascript(), xml(), json(), oneDark],
             editedCode: '',
             codeLoaded: false,
         };
@@ -164,7 +151,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'codemirror/theme/blackboard.css';
 
 .fm-modal-text-edit {
     .modal-body {
