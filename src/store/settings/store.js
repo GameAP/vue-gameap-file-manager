@@ -46,7 +46,7 @@ export default {
             windowsConfig: null,
 
             // App language
-            lang: null,
+            lang: 'en',
 
             // Translations (/src/lang)
             translations: {
