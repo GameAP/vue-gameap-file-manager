@@ -1,5 +1,5 @@
 <template>
-    <div class="fm-info-block d-flex justify-content-between">
+    <div class="fm-info-block d-flex justify-content-between grid grid-cols-3">
         <div class="col-auto">
             <span v-show="selectedCount">
                 {{ `${lang.info.selected} ${selectedCount}` }}

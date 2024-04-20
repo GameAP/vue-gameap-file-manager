@@ -1,6 +1,6 @@
 <template>
     <div class="fm-table">
-        <table class="table table-sm">
+        <table class="table table-sm w-full">
             <thead>
                 <tr>
                     <th class="w-65" v-on:click="sortBy('name')">
@@ -119,6 +119,8 @@ export default {
 <style lang="scss">
 .fm-table {
     thead th {
+        @apply text-left;
+
         background: white;
         position: sticky;
         top: 0;
@@ -141,6 +143,10 @@ export default {
         text-overflow: ellipsis;
     }
 
+    tr {
+        @apply border-b;
+    }
+
     tr:hover {
         background-color: #f8f9fa;
     }
@@ -154,8 +160,8 @@ export default {
     }
 
     .fm-content-item {
+        @apply px-2 py-3;
         cursor: pointer;
-        max-width: 1px;
     }
 
     .text-hidden {

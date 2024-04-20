@@ -1,6 +1,6 @@
 <template>
     <div class="fm-breadcrumb">
-        <nav aria-label="breadcrumb" class="flex px-5 py-3 text-stone-700 border border-stone-200 rounded-lg bg-stone-50 dark:bg-stone-800 dark:border-gray-700">
+        <nav aria-label="breadcrumb" class="flex px-3 py-0.5 rounded text-stone-700 border border-stone-200 bg-stone-50 dark:bg-stone-800 dark:border-stone-700">
             <ol class="breadcrumb" v-bind:class="[manager === activeManager ? 'active-manager' : 'bg-light']">
                 <li class="breadcrumb-item" v-on:click="selectMainDirectory">
                     <span class="badge bg-secondary">
@@ -92,6 +92,8 @@ export default {
 
 <style lang="scss">
 .fm-breadcrumb {
+    @apply mb-4;
+
     .breadcrumb {
         @apply inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse;
 

@@ -1,7 +1,7 @@
 <template>
     <div class="fm-grid">
-        <div class="d-flex align-content-start flex-wrap">
-            <div v-if="!isRootPath" v-on:click="levelUp" class="fm-grid-item text-center">
+        <div class="grid grid-cols-2 md:grid-cols-8 md:gap-2 sm:grid-cols-4 sm:gap-1">
+            <div v-if="!isRootPath" v-on:click="levelUp" class="fm-grid-item text-center hover:bg-stone-50">
                 <div class="fm-item-icon">
                     <i class="fa-solid fa-arrow-turn-up pb-2"></i>
                 </div>
@@ -106,7 +106,7 @@ export default {
     padding-top: 1rem;
 
     .fm-grid-item {
-        position: relative;
+        //position: relative;
         width: 125px;
         padding: 0.4rem;
         margin-bottom: 1rem;
@@ -114,23 +114,21 @@ export default {
         border-radius: 5px;
 
         &.active {
-            background-color: #cff4fc;
-            box-shadow: 3px 2px 5px gray;
+            @apply bg-stone-200;
         }
 
         &:not(.active):hover {
-            background-color: #f8f9fa;
-            box-shadow: 3px 2px 5px gray;
+            @apply bg-stone-100;
         }
 
         .fm-item-icon {
-            font-size: 5rem;
+            font-size: 4rem;
             cursor: pointer;
         }
 
         .fm-item-icon > i,
         .fm-item-icon > figure > i {
-            color: #6c757d;
+            //color: #6c757d;
         }
 
         .fm-item-info {

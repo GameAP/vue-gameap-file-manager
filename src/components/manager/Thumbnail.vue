@@ -1,7 +1,7 @@
 <template>
     <figure class="fm-thumbnail">
         <transition name="fade" mode="out-in">
-            <i v-if="!src" class="far fa-file-image fa-5x pb-2" />
+            <i v-if="!src" class="far fa-file-image" />
             <img v-else v-bind:src="src" v-bind:alt="file.filename" class="img-thumbnail" />
         </transition>
     </figure>
@@ -87,10 +87,6 @@ export default {
 
 <style lang="scss">
 .fm-thumbnail {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     .img-thumbnail {
         width: 88px;
         height: 88px;

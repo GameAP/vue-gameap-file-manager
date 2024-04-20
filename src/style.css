@@ -45,9 +45,13 @@
 }
 
 .form-check-input {
-    @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+    @apply w-4 h-4 text-blue-600 bg-stone-100 border-stone-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-stone-800 focus:ring-2 dark:bg-stone-700 dark:border-stone-600;
 }
 
 .form-check-label {
-    @apply ms-2 text-sm font-medium text-gray-900 dark:text-gray-300;
+    @apply ms-2 text-sm font-medium text-stone-900 dark:text-stone-300;
+}
+
+.table-info {
+    @apply w-full bg-stone-100;
 }

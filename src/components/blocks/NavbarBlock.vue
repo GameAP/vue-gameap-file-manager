@@ -2,7 +2,7 @@
     <div class="fm-navbar mb-3">
         <div class="grid grid-cols-2 gap-4">
             <div class="mb-2">
-                <div class="btn-group mr-4" role="group">
+                <div class="btn-group mr-4 mt-2 mt-2" role="group">
                     <button
                         type="button"
                         class="btn btn-secondary rounded-s border-r"
@@ -10,7 +10,7 @@
                         v-bind:title="lang.btn.back"
                         v-on:click="historyBack()"
                     >
-                        <i class="fa-solid fa-backward-fast"></i>
+                        <i class="fa-solid fa-chevron-left"></i>
                     </button>
                     <button
                         type="button"
@@ -19,7 +19,7 @@
                         v-bind:title="lang.btn.forward"
                         v-on:click="historyForward()"
                     >
-                        <i class="fa-solid fa-forward-fast"></i>
+                        <i class="fa-solid fa-chevron-right"></i>
                     </button>
                     <button
                         type="button"
@@ -30,7 +30,7 @@
                         <i class="fa-solid fa-rotate"></i>
                     </button>
                 </div>
-                <div class="btn-group mr-4" role="group">
+                <div class="btn-group mr-4 mt-2" role="group">
                     <button
                         type="button"
                         class="btn btn-secondary rounded-s border-r"
@@ -75,7 +75,7 @@
                         <i class="fa-regular fa-trash-can"></i>
                     </button>
                 </div>
-                <div class="btn-group mr-4" role="group">
+                <div class="btn-group mr-4 mt-2" role="group">
                     <button
                         type="button"
                         class="btn btn-secondary rounded-s border-r"
@@ -104,7 +104,7 @@
                         <i class="fa-regular fa-paste"></i>
                     </button>
                 </div>
-                <div class="btn-group mr-4" role="group">
+                <div class="btn-group mr-4 mt-2" role="group">
                     <button
                         type="button"
                         class="btn btn-secondary rounded"
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <div class="text-right">
-                <div class="btn-group mr-4" role="group">
+                <div class="btn-group mr-4 mt-2" role="group">
                     <button
                         type="button"
                         class="btn btn-secondary rounded-s border-r"
@@ -136,7 +136,7 @@
                         <i class="fa-solid fa-grip"></i>
                     </button>
                 </div>
-                <div class="btn-group mr-4" role="group">
+                <div class="btn-group mr-4 mt-2" role="group">
                     <button
                         type="button"
                         class="btn btn-secondary rounded"
@@ -147,7 +147,7 @@
                         <i class="fa-solid fa-maximize"></i>
                     </button>
                 </div>
-                <div class="btn-group mr-4" role="group">
+                <div class="btn-group mr-4 mt-2" role="group">
                     <button
                         type="button"
                         class="btn btn-secondary rounded"
