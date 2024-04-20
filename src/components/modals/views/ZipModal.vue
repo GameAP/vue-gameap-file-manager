@@ -1,8 +1,10 @@
 <template>
     <div class="modal-content fm-modal-zip">
-        <div class="modal-header">
+        <div class="modal-header grid grid-cols-2">
             <h5 class="modal-title">{{ lang.modal.zip.title }}</h5>
-            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal"></button>
+            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
+                <i class="bi bi-x-lg"></i>
+            </button>
         </div>
         <div class="modal-body">
             <label for="fm-zip-name">{{ lang.modal.zip.fieldName }}</label>
@@ -27,10 +29,10 @@
             <selected-file-list />
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-info" v-bind:disabled="!submitActive" v-on:click="createArchive">
+            <button type="button" class="btn btn-info rounded mr-2" v-bind:disabled="!submitActive" v-on:click="createArchive">
                 {{ lang.btn.submit }}
             </button>
-            <button type="button" class="btn btn-light" v-on:click="hideModal">{{ lang.btn.cancel }}</button>
+            <button type="button" class="btn btn-light rounded" v-on:click="hideModal">{{ lang.btn.cancel }}</button>
         </div>
     </div>
 </template>

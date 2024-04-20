@@ -1,18 +1,20 @@
 <template>
     <div class="modal-content fm-modal-upload">
-        <div class="modal-header">
+        <div class="modal-header grid grid-cols-2">
             <h5 class="modal-title">{{ lang.modal.upload.title }}</h5>
-            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal"></button>
+            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
+                <i class="bi bi-x-lg"></i>
+            </button>
         </div>
         <div class="modal-body">
             <div class="fm-btn-wrapper" v-show="!progressBar">
-                <button type="button" class="btn btn-secondary btn-block">
+                <button type="button" class="btn btn-secondary btn-block file-upload">
                     {{ lang.btn.uploadSelect }}
                 </button>
                 <input type="file" multiple name="myfile" v-on:change="selectFiles($event)" />
             </div>
             <div class="fm-upload-list" v-if="countFiles">
-                <div class="d-flex justify-content-between" v-for="(item, index) in newFiles" v-bind:key="index">
+                <div class="grid grid-cols-2 gap-4 my-4" v-for="(item, index) in newFiles" v-bind:key="index">
                     <div class="w-75 text-truncate">
                         <i class="bi" v-bind:class="mimeToIcon(item.type)" />
                         {{ item.name }}
@@ -22,7 +24,7 @@
                     </div>
                 </div>
                 <hr />
-                <div class="d-flex justify-content-between">
+                <div class="grid grid-cols-2 gap-4 my-4">
                     <div>
                         <strong>{{ lang.modal.upload.selected }}</strong>
                         {{ newFiles.length }}
@@ -33,7 +35,7 @@
                     </div>
                 </div>
                 <hr />
-                <div class="d-flex justify-content-between">
+                <div class="grid grid-cols-3 gap-4 my-3 my-4">
                     <div>
                         <strong>{{ lang.modal.upload.ifExist }}</strong>
                     </div>
@@ -69,11 +71,11 @@
             <div v-else>
                 <p>{{ lang.modal.upload.noSelected }}</p>
             </div>
-            <div class="fm-upload-info">
+            <div class="fm-upload-info my-4">
                 <!-- Progress Bar -->
-                <div class="progress" v-show="countFiles">
+                <div class="progress w-full bg-stone-200 dark:bg-stone-700" v-show="countFiles">
                     <div
-                        class="progress-bar progress-bar-striped bg-info"
+                        class="progress-bar progress-bar-striped bg-lime-600 text-xs font-medium text-lime-100 text-center leading-none"
                         role="progressbar"
                         v-bind:aria-valuenow="progressBar"
                         aria-valuemin="0"
@@ -88,14 +90,14 @@
         <div class="modal-footer">
             <button
                 type="button"
-                class="btn"
+                class="btn rounded mr-2"
                 v-bind:class="[countFiles ? 'btn-info' : 'btn-light']"
                 v-bind:disabled="!countFiles"
                 v-on:click="uploadFiles"
             >
                 {{ lang.btn.submit }}
             </button>
-            <button type="button" class="btn btn-light" v-on:click="hideModal()">{{ lang.btn.cancel }}</button>
+            <button type="button" class="btn btn-light rounded" v-on:click="hideModal()">{{ lang.btn.cancel }}</button>
         </div>
     </div>
 </template>
@@ -212,6 +214,10 @@ export default {
 
     .fm-upload-info > .progress {
         margin-bottom: 1rem;
+    }
+
+    .file-upload {
+        @apply block w-full inline-block align-middle text-center select-none font-normal leading-normal no-underline text-black bg-white border border-stone-300 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 dark:bg-stone-800 dark:text-white dark:border-stone-600 dark:hover:bg-stone-700 dark:hover:border-stone-600 dark:focus:ring-stone-700;
     }
 }
 </style>

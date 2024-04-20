@@ -1,10 +1,12 @@
 <template>
     <div class="modal-content fm-modal-audio-player">
-        <div class="modal-header">
+        <div class="modal-header grid grid-cols-2">
             <h5 class="modal-title">
                 {{ lang.modal.audioPlayer.title }}
             </h5>
-            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal"></button>
+            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
+                <i class="bi bi-x-lg"></i>
+            </button>
         </div>
         <div class="modal-body">
             <audio ref="fmAudio" controls />

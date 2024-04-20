@@ -1,13 +1,15 @@
 <template>
     <div class="modal-content fm-modal-preview">
-        <div class="modal-header">
+        <div class="modal-header grid grid-cols-2">
             <h5 class="modal-title w-75 text-truncate">
                 {{ showCropperModule ? lang.modal.cropper.title : lang.modal.preview.title }}
                 <small class="text-muted pl-3">{{ selectedItem.basename }}</small>
             </h5>
-            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal"></button>
+            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
+                <i class="bi bi-x-lg"></i>
+            </button>
         </div>
-        <div class="modal-body text-center">
+        <div class="modal-body flex text-center justify-center items-center">
             <template v-if="showCropperModule">
                 <cropper-module v-bind:imgSrc="imgSrc" v-bind:maxHeight="maxHeight" v-on:closeCropper="closeCropper" />
             </template>
@@ -27,7 +29,7 @@
             <span class="d-block">
                 <button
                     type="button"
-                    class="btn btn-info"
+                    class="btn btn-info rounded mr-2"
                     v-bind:title="lang.modal.cropper.title"
                     v-on:click="showCropperModule = true"
                 >
@@ -35,7 +37,7 @@
                 </button>
             </span>
             <span class="d-block">
-                <button type="button" class="btn btn-light" v-on:click="hideModal">{{ lang.btn.cancel }}</button>
+                <button type="button" class="btn btn-light rounded" v-on:click="hideModal">{{ lang.btn.cancel }}</button>
             </span>
         </div>
     </div>
@@ -132,7 +134,8 @@ export default {
             if (this.auth) {
                 GET.preview(this.selectedDisk, this.selectedItem.path).then((response) => {
                     const mimeType = response.headers['content-type'].toLowerCase();
-                    const imgBase64 = Buffer.from(response.data, 'binary').toString('base64');
+
+                    const imgBase64 = btoa(String.fromCharCode.apply(null, new Uint8Array(response.data)));
 
                     this.imgSrc = `data:${mimeType};base64,${imgBase64}`;
                 });

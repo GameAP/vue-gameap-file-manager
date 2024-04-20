@@ -1,8 +1,17 @@
 <template>
     <transition name="fm-modal">
-        <div class="fm-modal modal" ref="fmModal" v-on:click="hideModal">
-            <div class="modal-dialog modal-dialog-centered" role="document" v-bind:class="modalSize" v-on:click.stop>
-                <component v-bind:is="modalName" />
+        <div class="fm-modal modal z-50 hs-overlay-backdrop transition duration fixed inset-0 bg-gray-900 bg-opacity-50 dark:bg-opacity-80 dark:bg-neutral-900" aria-hidden="true" ref="fmModal" v-on:click="hideModal">
+            <div id="static-modal" tabindex="-1" class="absolute inset-0 h-screen flex justify-center items-center overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative p-4 w-full max-w-2xl max-h-full" v-bind:class="modalSize" >
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <div class="p-4 md:p-5 space-y-4">
+                            <div class="modal-dialog modal-dialog-centered" role="document" v-on:click.stop>
+                                <component v-bind:is="modalName" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </transition>
@@ -82,25 +91,9 @@ export default {
 
 <style lang="scss">
 .fm-modal {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.35);
-    display: block;
-    transition: opacity 0.4s ease;
-    overflow: auto;
-
     .modal-xl {
-        max-width: 96%;
+        max-width: 1000px;
     }
 }
 
-.fm-modal-enter-active,
-.fm-modal-leave-active {
-    transition: opacity 0.5s;
-}
-
-.fm-modal-enter,
-.fm-modal-leave-to {
-    opacity: 0;
-}
 </style>

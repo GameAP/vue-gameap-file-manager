@@ -1,8 +1,10 @@
 <template>
     <div class="modal-content fm-modal-delete">
-        <div class="modal-header">
+        <div class="modal-header grid grid-cols-2">
             <h5 class="modal-title">{{ lang.modal.delete.title }}</h5>
-            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal"></button>
+            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
+                <i class="bi bi-x-lg"></i>
+            </button>
         </div>
         <div class="modal-body">
             <div v-if="selectedItems.length">
@@ -13,8 +15,8 @@
             </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-danger" v-on:click="deleteItems">{{ lang.modal.delete.title }}</button>
-            <button type="button" class="btn btn-light" v-on:click="hideModal">{{ lang.btn.cancel }}</button>
+            <button type="button" class="btn btn-danger mr-2 rounded" v-on:click="deleteItems">{{ lang.modal.delete.title }}</button>
+            <button type="button" class="btn btn-light rounded" v-on:click="hideModal">{{ lang.btn.cancel }}</button>
         </div>
     </div>
 </template>

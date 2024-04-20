@@ -1,33 +1,35 @@
 <template>
     <div class="modal-content fm-modal-about">
-        <div class="modal-header">
+        <div class="modal-header grid grid-cols-2">
             <h5 class="modal-title">{{ lang.modal.about.title }}</h5>
-            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal"></button>
+            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
+                <i class="bi bi-x-lg"></i>
+            </button>
         </div>
         <div class="modal-body">
             <strong>{{ lang.modal.about.name }}</strong>
             <hr />
-            <dl class="row">
-                <dt class="col-3">{{ lang.modal.about.version }}:</dt>
-                <dd class="col-9">{{ version }}</dd>
+            <div class="grid grid-cols-2">
+                <div class="my-3">{{ lang.modal.about.version }}:</div>
+                <div class="my-3">{{ version }}</div>
 
-                <dt class="col-3">{{ lang.modal.about.developer }}:</dt>
-                <dd class="col-9">Aleksandr Manekin (alexusmai@gmail.com)</dd>
+                <div class="my-3">{{ lang.modal.about.developer }}:</div>
+                <div class="my-3">Aleksandr Manekin (alexusmai@gmail.com)</div>
 
-                <dt class="col-3">{{ lang.modal.about.developer }}:</dt>
-                <dd class="col-9">Nikita Kuznetsov (nikita.hldm@gmail.com)</dd>
+                <div class="my-3">{{ lang.modal.about.developer }}:</div>
+                <div class="my-3">Nikita Kuznetsov (nikita.hldm@gmail.com)</div>
 
-                <dt class="col-3">GitHub:</dt>
-                <dd class="col-9">
-                    <a href="https://github.com/gameap/gameap-file-manager" target="_blank">
+                <div class="my-3">GitHub:</div>
+                <div class="my-3">
+                    <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://github.com/gameap/gameap-file-manager" target="_blank">
                         gameap/gameap-file-manager
                     </a>
                     <br />
-                    <a href="gameap/vue-gameap-file-manager" target="_blank">
+                    <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="gameap/vue-gameap-file-manager" target="_blank">
                         gameap/vue-laravel-file-manager
                     </a>
-                </dd>
-            </dl>
+                </div>
+            </div>
         </div>
     </div>
 </template>

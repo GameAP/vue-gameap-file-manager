@@ -1,11 +1,13 @@
 <template>
     <div class="modal-content fm-modal-text-edit">
-        <div class="modal-header">
+        <div class="modal-header grid grid-cols-2">
             <h5 class="modal-title w-75 text-truncate">
                 {{ lang.modal.editor.title }}
                 <small class="text-muted pl-3">{{ selectedItem.basename }}</small>
             </h5>
-            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal"></button>
+            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
+                <i class="bi bi-x-lg"></i>
+            </button>
         </div>
         <div class="modal-body">
             <div v-if="codeLoaded">
@@ -23,11 +25,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-info" v-on:click="updateFile">
+        <div class="modal-footer mt-2">
+            <button type="button" class="btn btn-info mr-2 rounded" v-on:click="updateFile">
                 {{ lang.btn.submit }}
             </button>
-            <button type="button" class="btn btn-light" v-on:click="hideModal">
+            <button type="button" class="btn btn-light rounded" v-on:click="hideModal">
                 {{ lang.btn.cancel }}
             </button>
         </div>

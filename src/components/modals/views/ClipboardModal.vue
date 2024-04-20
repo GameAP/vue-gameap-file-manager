@@ -1,8 +1,10 @@
 <template>
     <div class="modal-content fm-modal-clipboard">
-        <div class="modal-header">
+        <div class="modal-header grid grid-cols-2">
             <h5 class="modal-title">{{ lang.clipboard.title }}</h5>
-            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal"></button>
+            <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
+                <i class="bi bi-x-lg"></i>
+            </button>
         </div>
         <div class="modal-body">
             <template v-if="clipboard.type">
@@ -56,10 +58,10 @@
             </template>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-danger" v-bind:disabled="!clipboard.type" v-on:click="resetClipboard">
+            <button type="button" class="btn btn-danger rounded mr-2" v-bind:disabled="!clipboard.type" v-on:click="resetClipboard">
                 {{ lang.btn.clear }}
             </button>
-            <button type="button" class="btn btn-light" v-on:click="hideModal">{{ lang.btn.cancel }}</button>
+            <button type="button" class="btn btn-light rounded" v-on:click="hideModal">{{ lang.btn.cancel }}</button>
         </div>
     </div>
 </template>
