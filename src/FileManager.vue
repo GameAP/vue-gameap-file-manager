@@ -1,27 +1,27 @@
 <template>
-    <div class="fm d-flex flex-column" v-bind:class="{ 'fm-full-screen': fullScreen }">
+    <div class="fm flex flex-col" v-bind:class="{ 'fm-full-screen': fullScreen }">
         <navbar-block />
-        <div class="fm-body d-flex">
+        <div class="fm-body flex">
             <notification-block />
             <context-menu />
             <modal-block v-if="showModal" />
             <template v-if="windowsConfig === 1">
-                <left-manager class="col" manager="left" />
+                <left-manager class="relative flex-grow max-w-full flex-1 px-4" manager="left" />
             </template>
             <template v-else-if="windowsConfig === 2">
-                <folder-tree class="col-4 col-md-3" />
-                <left-manager class="col-8 col-md-9" manager="left" />
+                <folder-tree class="w-1/3 md:w-1/4 pr-4 pl-4" />
+                <left-manager class="w-2/3 md:w-3/4 pr-4 pl-4" manager="left" />
             </template>
             <template v-else-if="windowsConfig === 3">
                 <left-manager
-                    class="col-12 col-sm-6"
+                    class="w-full sm:w-1/2 pr-4 pl-4"
                     manager="left"
                     v-on:click.native="selectManager('left')"
                     v-on:contextmenu.native="selectManager('left')"
                 >
                 </left-manager>
                 <right-manager
-                    class="col-12 col-sm-6"
+                    class="w-full sm:w-1/2 pr-4 pl-4"
                     manager="right"
                     v-on:click.native="selectManager('right')"
                     v-on:contextmenu.native="selectManager('right')"

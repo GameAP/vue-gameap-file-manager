@@ -2,6 +2,9 @@ import { createApp } from 'vue';
 import { createStore } from 'vuex';
 // store
 import fm from './store';
+
+import './style.css'
+
 // App
 import App from './FileManager.vue';
 

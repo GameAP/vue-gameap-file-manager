@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+    @apply font-bold py-2 px-3 text-base;
+}
+
+.btn-secondary {
+    @apply inline-block align-middle text-center select-none font-normal leading-normal no-underline text-white bg-stone-700 hover:bg-stone-800 disabled:bg-stone-400;
+}
+
+.btn-group {
+    @apply inline-flex rounded-md shadow-sm;
+}

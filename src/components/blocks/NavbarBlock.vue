@@ -1,11 +1,11 @@
 <template>
     <div class="fm-navbar mb-3">
-        <div class="row justify-content-between">
-            <div class="col-auto mb-2">
-                <div class="btn-group" role="group">
+        <div class="grid grid-cols-2 gap-4">
+            <div class="mb-2">
+                <div class="btn-group mr-4" role="group">
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary rounded-s border-r"
                         v-bind:disabled="backDisabled"
                         v-bind:title="lang.btn.back"
                         v-on:click="historyBack()"
@@ -14,7 +14,7 @@
                     </button>
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary border-r"
                         v-bind:disabled="forwardDisabled"
                         v-bind:title="lang.btn.forward"
                         v-on:click="historyForward()"
@@ -23,17 +23,17 @@
                     </button>
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary rounded-e"
                         v-on:click="refreshAll()"
                         v-bind:title="lang.btn.refresh"
                     >
                         <i class="bi bi-arrow-repeat"></i>
                     </button>
                 </div>
-                <div class="btn-group" role="group">
+                <div class="btn-group mr-4" role="group">
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary rounded-s border-r"
                         v-on:click="showModal('NewFileModal')"
                         v-bind:title="lang.btn.file"
                     >
@@ -41,7 +41,7 @@
                     </button>
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary border-r"
                         v-on:click="showModal('NewFolderModal')"
                         v-bind:title="lang.btn.folder"
                     >
@@ -49,7 +49,7 @@
                     </button>
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary border-r"
                         disabled
                         v-if="uploading"
                         v-bind:title="lang.btn.upload"
@@ -58,7 +58,7 @@
                     </button>
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary border-r"
                         v-else
                         v-on:click="showModal('UploadModal')"
                         v-bind:title="lang.btn.upload"
@@ -67,7 +67,7 @@
                     </button>
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary rounded-e"
                         v-bind:disabled="!isAnyItemSelected"
                         v-on:click="showModal('DeleteModal')"
                         v-bind:title="lang.btn.delete"
@@ -75,10 +75,10 @@
                         <i class="bi bi-trash"></i>
                     </button>
                 </div>
-                <div class="btn-group" role="group">
+                <div class="btn-group mr-4" role="group">
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary rounded-s border-r"
                         v-bind:disabled="!isAnyItemSelected"
                         v-bind:title="lang.btn.copy"
                         v-on:click="toClipboard('copy')"
@@ -87,7 +87,7 @@
                     </button>
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary border-r"
                         v-bind:disabled="!isAnyItemSelected"
                         v-bind:title="lang.btn.cut"
                         v-on:click="toClipboard('cut')"
@@ -96,7 +96,7 @@
                     </button>
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary rounded-e"
                         v-bind:disabled="!clipboardType"
                         v-bind:title="lang.btn.paste"
                         v-on:click="paste"
@@ -104,10 +104,10 @@
                         <i class="bi bi-clipboard"></i>
                     </button>
                 </div>
-                <div class="btn-group" role="group">
+                <div class="btn-group mr-4" role="group">
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary rounded"
                         v-bind:title="lang.btn.hidden"
                         v-on:click="toggleHidden"
                     >
@@ -115,11 +115,11 @@
                     </button>
                 </div>
             </div>
-            <div class="col-auto text-right">
-                <div class="btn-group" role="group">
+            <div class="text-right">
+                <div class="btn-group mr-4" role="group">
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary rounded-s border-r"
                         v-bind:class="[viewType === 'table' ? 'active' : '']"
                         v-on:click="selectView('table')"
                         v-bind:title="lang.btn.table"
@@ -128,7 +128,7 @@
                     </button>
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary rounded-e"
                         v-bind:class="[viewType === 'grid' ? 'active' : '']"
                         v-on:click="selectView('grid')"
                         v-bind:title="lang.btn.grid"
@@ -136,10 +136,10 @@
                         <i class="bi bi-grid"></i>
                     </button>
                 </div>
-                <div class="btn-group" role="group">
+                <div class="btn-group mr-4" role="group">
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary rounded"
                         v-bind:title="lang.btn.fullScreen"
                         v-bind:class="{ active: fullScreen }"
                         v-on:click="screenToggle"
@@ -147,10 +147,10 @@
                         <i class="bi bi-arrows-fullscreen"></i>
                     </button>
                 </div>
-                <div class="btn-group" role="group">
+                <div class="btn-group mr-4" role="group">
                     <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary rounded"
                         v-bind:title="lang.btn.about"
                         v-on:click="showModal('AboutModal')"
                     >
