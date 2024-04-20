@@ -3,7 +3,7 @@
         <div class="modal-header grid grid-cols-2">
             <h5 class="modal-title">{{ lang.clipboard.title }}</h5>
             <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
-                <i class="bi bi-x-lg"></i>
+                <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
         <div class="modal-body">
@@ -11,13 +11,13 @@
                 <div class="d-flex justify-content-between">
                     <div class="w-75 text-truncate">
                         <span class="badge bg-light text-dark"
-                            ><i class="bi bi-hdd pe-1"></i> {{ clipboard.disk }}</span
+                            ><i class="fa-solid fa-hard-drive pe-1"></i> {{ clipboard.disk }}</span
                         >
                     </div>
                     <div class="text-right text-muted">
                         <span v-bind:title="`${lang.clipboard.actionType} - ${lang.clipboard[clipboard.type]}`">
-                            <i v-if="clipboard.type === 'copy'" class="bi bi-files" />
-                            <i v-else class="bi bi-scissors" />
+                            <i v-if="clipboard.type === 'copy'" class="fa-regular fa-copy" />
+                            <i v-else class="fa-solid fa-scissors" />
                         </span>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                     v-bind:key="`d-${index}`"
                 >
                     <div class="w-75 text-truncate">
-                        <span><i class="bi bi-folder" /> {{ dir.name }}</span>
+                        <span><i class="fa-regular fa-folder"></i> {{ dir.name }}</span>
                     </div>
                     <div class="text-right">
                         <button
@@ -41,7 +41,7 @@
                 </div>
                 <div class="d-flex justify-content-between" v-for="(file, index) in files" v-bind:key="`f-${index}`">
                     <div class="w-75 text-truncate">
-                        <span><i class="bi" v-bind:class="file.icon" /> {{ file.name }}</span>
+                        <span><i v-bind:class="file.icon" /> {{ file.name }}</span>
                     </div>
                     <div class="text-right">
                         <button

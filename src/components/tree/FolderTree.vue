@@ -1,6 +1,6 @@
 <template>
     <div class="fm-tree">
-        <div class="fm-tree-disk sticky-top"><i class="bi bi-hdd"></i> {{ selectedDisk }}</div>
+        <div class="fm-tree-disk sticky-top"><i class="fa-solid fa-hard-drive"></i> {{ selectedDisk }}</div>
         <branch v-bind:parent-id="0" />
     </div>
 </template>

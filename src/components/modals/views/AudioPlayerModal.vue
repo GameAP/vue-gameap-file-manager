@@ -5,7 +5,7 @@
                 {{ lang.modal.audioPlayer.title }}
             </h5>
             <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
-                <i class="bi bi-x-lg"></i>
+                <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
         <div class="modal-body">
@@ -23,15 +23,15 @@
                 </div>
                 <template v-if="playingIndex === index">
                     <div v-if="status === 'playing'">
-                        <i v-on:click="togglePlay()" class="bi bi-play-fill active" />
+                        <i v-on:click="togglePlay()" class="fa-solid fa-play active" />
                     </div>
                     <div v-else>
-                        <i v-on:click="togglePlay()" class="bi bi-pause-fill" />
+                        <i v-on:click="togglePlay()" class="fa-solid fa-pause" />
                     </div>
                 </template>
                 <template v-else>
                     <div>
-                        <i v-on:click="selectTrack(index)" class="bi bi-play-fill" />
+                        <i v-on:click="selectTrack(index)" class="fa-solid fa-play" />
                     </div>
                 </template>
             </div>
@@ -167,12 +167,6 @@ export default {
             opacity: 1;
             color: deepskyblue;
         }
-    }
-
-    .bi.bi-pause-fill {
-        color: gray;
-        opacity: 0.5;
-        cursor: pointer;
     }
 }
 </style>

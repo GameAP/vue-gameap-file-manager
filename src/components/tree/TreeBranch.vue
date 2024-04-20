@@ -7,12 +7,12 @@
                 v-on:click="selectDirectory(directory.path)"
             >
                 <i
-                    class="bi"
+                    class="fa-regular"
                     v-if="directory.props.hasSubdirectories"
                     v-on:click.stop="showSubdirectories(directory.path, directory.props.showSubdirectories)"
-                    v-bind:class="[arrowState(index) ? 'bi-dash-square' : 'bi-plus-square']"
+                    v-bind:class="[arrowState(index) ? 'fa-square-minus' : 'fa-square-plus']"
                 />
-                <i class="bi bi-dash" v-else />
+                <i class="fa-solid fa-minus" v-else />
                 {{ directory.basename }}
             </p>
 
@@ -107,13 +107,6 @@ export default {
         &.selected {
             background-color: #f8f9fa;
         }
-    }
-
-    .bi.bi-dash,
-    .bi.bi-dash-square,
-    .bi.bi-plus-square {
-        font-size: 0.9rem;
-        padding-right: 0.4rem;
     }
 }
 

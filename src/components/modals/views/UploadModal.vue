@@ -3,7 +3,7 @@
         <div class="modal-header grid grid-cols-2">
             <h5 class="modal-title">{{ lang.modal.upload.title }}</h5>
             <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
-                <i class="bi bi-x-lg"></i>
+                <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
         <div class="modal-body">
@@ -16,7 +16,7 @@
             <div class="fm-upload-list" v-if="countFiles">
                 <div class="grid grid-cols-2 gap-4 my-4" v-for="(item, index) in newFiles" v-bind:key="index">
                     <div class="w-75 text-truncate">
-                        <i class="bi" v-bind:class="mimeToIcon(item.type)" />
+                        <i v-bind:class="mimeToIcon(item.type)" />
                         {{ item.name }}
                     </div>
                     <div class="text-right">
@@ -204,7 +204,7 @@ export default {
         cursor: pointer;
     }
 
-    .fm-upload-list .bi {
+    .fm-upload-list .fa {
         padding-right: 0.5rem;
     }
 

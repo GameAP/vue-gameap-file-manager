@@ -40,70 +40,70 @@ export default {
             // mime types
             const mimeTypes = {
                 // image
-                'image/gif': 'bi-file-earmark-image',
-                'image/png': 'bi-file-earmark-image',
-                'image/jpeg': 'bi-file-earmark-image',
-                'image/bmp': 'bi-file-earmark-image',
-                'image/webp': 'bi-file-earmark-image',
-                'image/tiff': 'bi-file-earmark-image',
-                'image/svg+xml': 'bi-file-earmark-image',
+                'image/gif': 'fa-regular fa-file-image',
+                'image/png': 'fa-regular fa-file-image',
+                'image/jpeg': 'fa-regular fa-file-image',
+                'image/bmp': 'fa-regular fa-file-image',
+                'image/webp': 'fa-regular fa-file-image',
+                'image/tiff': 'fa-regular fa-file-image',
+                'image/svg+xml': 'fa-regular fa-file-image',
 
                 // text
-                'text/plain': 'bi-file-earmark-font',
+                'text/plain': 'fa-regular fa-file-lines',
 
                 // code
-                'text/javascript': 'bi-file-earmark-code',
-                'application/json': 'bi-file-earmark-code',
-                'text/markdown': 'bi-file-earmark-code',
-                'text/html': 'bi-file-earmark-code',
-                'text/css': 'bi-file-earmark-code',
+                'text/javascript': 'fa-regular fa-file-code',
+                'application/json': 'fa-regular fa-file-code',
+                'text/markdown': 'fa-regular fa-file-code',
+                'text/html': 'fa-regular fa-file-code',
+                'text/css': 'fa-regular fa-file-code',
 
                 // audio
-                'audio/midi': 'bi-file-earmark-music',
-                'audio/mpeg': 'bi-file-earmark-music',
-                'audio/webm': 'bi-file-earmark-music',
-                'audio/ogg': 'bi-file-earmark-music',
-                'audio/wav': 'bi-file-earmark-music',
-                'audio/aac': 'bi-file-earmark-music',
-                'audio/x-wav': 'bi-file-earmark-music',
-                'audio/mp4': 'bi-file-earmark-music',
+                'audio/midi': 'fa-regular fa-file-audio',
+                'audio/mpeg': 'fa-regular fa-file-audio',
+                'audio/webm': 'fa-regular fa-file-audio',
+                'audio/ogg': 'fa-regular fa-file-audio',
+                'audio/wav': 'fa-regular fa-file-audio',
+                'audio/aac': 'fa-regular fa-file-audio',
+                'audio/x-wav': 'fa-regular fa-file-audio',
+                'audio/mp4': 'fa-regular fa-file-audio',
 
                 // video
-                'video/webm': 'bi-file-earmark-play',
-                'video/ogg': 'bi-file-earmark-play',
-                'video/mpeg': 'bi-file-earmark-play',
-                'video/3gpp': 'bi-file-earmark-play',
-                'video/x-flv': 'bi-file-earmark-play',
-                'video/mp4': 'bi-file-earmark-play',
-                'video/quicktime': 'bi-file-earmark-play',
-                'video/x-msvideo': 'bi-file-earmark-play',
-                'video/vnd.dlna.mpeg-tts': 'bi-file-earmark-play',
+                'video/webm': 'fa-regular fa-file-video',
+                'video/ogg': 'fa-regular fa-file-video',
+                'video/mpeg': 'fa-regular fa-file-video',
+                'video/3gpp': 'fa-regular fa-file-video',
+                'video/x-flv': 'fa-regular fa-file-video',
+                'video/mp4': 'fa-regular fa-file-video',
+                'video/quicktime': 'fa-regular fa-file-video',
+                'video/x-msvideo': 'fa-regular fa-file-video',
+                'video/vnd.dlna.mpeg-tts': 'fa-regular fa-file-video',
 
                 // archive
-                'application/x-bzip': 'bi-file-earmark-zip',
-                'application/x-bzip2': 'bi-file-earmark-zip',
-                'application/x-tar': 'bi-file-earmark-zip',
-                'application/gzip': 'bi-file-earmark-zip',
-                'application/zip': 'bi-file-earmark-zip',
-                'application/x-7z-compressed': 'bi-file-earmark-zip',
-                'application/x-rar-compressed': 'bi-file-earmark-zip',
+                'application/x-bzip': 'fa-solid fa-file-zipper',
+                'application/x-bzip2': 'fa-solid fa-file-zipper',
+                'application/x-tar': 'fa-solid fa-file-zipper',
+                'application/gzip': 'fa-solid fa-file-zipper',
+                'application/zip': 'fa-solid fa-file-zipper',
+                'application/x-7z-compressed': 'fa-solid fa-file-zipper',
+                'application/x-rar-compressed': 'fa-solid fa-file-zipper',
 
                 // application
-                'application/pdf': 'bi-file-earmark-pdf',
-                'application/rtf': 'bi-file-earmark-word',
-                'application/msword': 'bi-file-earmark-word',
+                'application/pdf': 'fa-regular fa-file-pdf',
+                'application/rtf': 'fa-regular fa-file-word',
+                'application/msword': 'fa-regular fa-file-word',
 
-                'application/vnd.ms-word': 'bi-file-earmark-word',
-                'application/vnd.ms-excel': 'bi-file-earmark-excel',
-                'application/vnd.ms-powerpoint': 'bi-file-earmark-ppt',
+                'application/vnd.ms-word': 'fa-regular fa-file-word',
+                'application/vnd.ms-excel': 'fa-regular fa-file-excel',
+                'application/vnd.ms-powerpoint': 'fa-solid fa-file-powerpoint',
 
-                'application/vnd.oasis.opendocument.text': 'bi-file-earmark-word',
-                'application/vnd.oasis.opendocument.spreadsheet': 'bi-file-earmark-excel',
-                'application/vnd.oasis.opendocument.presentation': 'bi-file-earmark-ppt',
+                'application/vnd.oasis.opendocument.text': 'fa-regular fa-file-word',
+                'application/vnd.oasis.opendocument.spreadsheet': 'fa-regular fa-file-excel',
+                'application/vnd.oasis.opendocument.presentation': 'fa-solid fa-file-powerpoint',
 
-                'application/vnd.openxmlformats-officedocument.wordprocessingml': 'bi-file-earmark-word',
-                'application/vnd.openxmlformats-officedocument.spreadsheetml': 'bi-file-earmark-excel',
-                'application/vnd.openxmlformats-officedocument.presentationml': 'bi-file-earmark-ppt',
+                'application/vnd.openxmlformats-officedocument.wordprocessingml': 'fa-regular fa-file-word',
+                'application/vnd.openxmlformats-officedocument.spreadsheetml': 'fa-regular fa-file-excel',
+                'application/vnd.openxmlformats-officedocument.presentationml': 'fa-solid fa-file-powerpoint',
             };
 
             if (mimeTypes[mime] !== undefined) {
@@ -111,7 +111,7 @@ export default {
             }
 
             // file blank
-            return 'bi-file-earmark';
+            return 'fa-regular fa-file';
         },
 
         /**
@@ -123,88 +123,88 @@ export default {
             // files extensions
             const extensionTypes = {
                 // images
-                gif: 'bi-file-earmark-image',
-                png: 'bi-file-earmark-image',
-                jpeg: 'bi-file-earmark-image',
-                jpg: 'bi-file-earmark-image',
-                bmp: 'bi-file-earmark-image',
-                psd: 'bi-file-earmark-image',
-                svg: 'bi-file-earmark-image',
-                ico: 'bi-file-earmark-image',
-                ai: 'bi-file-earmark-image',
-                tif: 'bi-file-earmark-image',
-                tiff: 'bi-file-earmark-image',
-                webp: 'bi-file-earmark-image',
+                gif: 'fa-regular fa-file-image',
+                png: 'fa-regular fa-file-image',
+                jpeg: 'fa-regular fa-file-image',
+                jpg: 'fa-regular fa-file-image',
+                bmp: 'fa-regular fa-file-image',
+                psd: 'fa-regular fa-file-image',
+                svg: 'fa-regular fa-file-image',
+                ico: 'fa-regular fa-file-image',
+                ai: 'fa-regular fa-file-image',
+                tif: 'fa-regular fa-file-image',
+                tiff: 'fa-regular fa-file-image',
+                webp: 'fa-regular fa-file-image',
 
                 // text
-                txt: 'bi-file-earmark-font',
-                json: 'bi-file-earmark-font',
-                log: 'bi-file-earmark-font',
-                ini: 'bi-file-earmark-font',
-                xml: 'bi-file-earmark-font',
-                md: 'bi-file-earmark-font',
-                env: 'bi-file-earmark-font',
+                txt: 'fa-regular fa-file-lines',
+                json: 'fa-regular fa-file-lines',
+                log: 'fa-regular fa-file-lines',
+                ini: 'fa-regular fa-file-lines',
+                xml: 'fa-regular fa-file-lines',
+                md: 'fa-regular fa-file-lines',
+                env: 'fa-regular fa-file-lines',
 
                 // code
-                js: 'bi-file-earmark-code',
-                php: 'bi-file-earmark-code',
-                css: 'bi-file-earmark-code',
-                cpp: 'bi-file-earmark-code',
-                class: 'bi-file-earmark-code',
-                h: 'bi-file-earmark-code',
-                java: 'bi-file-earmark-code',
-                sh: 'bi-file-earmark-code',
-                swift: 'bi-file-earmark-code',
+                js: 'fa-regular fa-file-code',
+                php: 'fa-regular fa-file-code',
+                css: 'fa-regular fa-file-code',
+                cpp: 'fa-regular fa-file-code',
+                class: 'fa-regular fa-file-code',
+                h: 'fa-regular fa-file-code',
+                java: 'fa-regular fa-file-code',
+                sh: 'fa-regular fa-file-code',
+                swift: 'fa-regular fa-file-code',
 
                 // audio
-                aif: 'bi-file-earmark-music',
-                cda: 'bi-file-earmark-music',
-                mid: 'bi-file-earmark-music',
-                mp3: 'bi-file-earmark-music',
-                mpa: 'bi-file-earmark-music',
-                ogg: 'bi-file-earmark-music',
-                wav: 'bi-file-earmark-music',
-                wma: 'bi-file-earmark-music',
+                aif: 'fa-regular fa-file-audio',
+                cda: 'fa-regular fa-file-audio',
+                mid: 'fa-regular fa-file-audio',
+                mp3: 'fa-regular fa-file-audio',
+                mpa: 'fa-regular fa-file-audio',
+                ogg: 'fa-regular fa-file-audio',
+                wav: 'fa-regular fa-file-audio',
+                wma: 'fa-regular fa-file-audio',
 
                 // video
-                wmv: 'bi-file-earmark-play',
-                avi: 'bi-file-earmark-play',
-                mpeg: 'bi-file-earmark-play',
-                mpg: 'bi-file-earmark-play',
-                flv: 'bi-file-earmark-play',
-                mp4: 'bi-file-earmark-play',
-                mkv: 'bi-file-earmark-play',
-                mov: 'bi-file-earmark-play',
-                ts: 'bi-file-earmark-play',
-                '3gpp': 'bi-file-earmark-play',
+                wmv: 'fa-regular fa-file-video',
+                avi: 'fa-regular fa-file-video',
+                mpeg: 'fa-regular fa-file-video',
+                mpg: 'fa-regular fa-file-video',
+                flv: 'fa-regular fa-file-video',
+                mp4: 'fa-regular fa-file-video',
+                mkv: 'fa-regular fa-file-video',
+                mov: 'fa-regular fa-file-video',
+                ts: 'fa-regular fa-file-video',
+                '3gpp': 'fa-regular fa-file-video',
 
                 // archive
-                zip: 'bi-file-earmark-zip',
-                arj: 'bi-file-earmark-zip',
-                deb: 'bi-file-earmark-zip',
-                pkg: 'bi-file-earmark-zip',
-                rar: 'bi-file-earmark-zip',
-                rpm: 'bi-file-earmark-zip',
-                '7z': 'bi-file-earmark-zip',
-                'tar.gz': 'bi-file-earmark-zip',
+                zip: 'fa-solid fa-file-zipper',
+                arj: 'fa-solid fa-file-zipper',
+                deb: 'fa-solid fa-file-zipper',
+                pkg: 'fa-solid fa-file-zipper',
+                rar: 'fa-solid fa-file-zipper',
+                rpm: 'fa-solid fa-file-zipper',
+                '7z': 'fa-solid fa-file-zipper',
+                'tar.gz': 'fa-solid fa-file-zipper',
 
                 // application
-                pdf: 'bi-file-earmark-pdf',
+                pdf: 'fa-regular fa-file-pdf',
 
-                rtf: 'bi-file-earmark-word',
-                doc: 'bi-file-earmark-word',
-                docx: 'bi-file-earmark-word',
-                odt: 'bi-file-earmark-word',
+                rtf: 'fa-regular fa-file-word',
+                doc: 'fa-regular fa-file-word',
+                docx: 'fa-regular fa-file-word',
+                odt: 'fa-regular fa-file-word',
 
-                xlr: 'bi-file-earmark-excel',
-                xls: 'bi-file-earmark-excel',
-                xlsx: 'bi-file-earmark-excel',
+                xlr: 'fa-regular fa-file-excel',
+                xls: 'fa-regular fa-file-excel',
+                xlsx: 'fa-regular fa-file-excel',
 
-                ppt: 'bi-file-earmark-ppt',
-                pptx: 'bi-file-earmark-ppt',
-                pptm: 'bi-file-earmark-ppt',
-                xps: 'bi-file-earmark-ppt',
-                potx: 'bi-file-earmark-ppt',
+                ppt: 'fa-solid fa-file-powerpoint',
+                pptx: 'fa-solid fa-file-powerpoint',
+                pptm: 'fa-solid fa-file-powerpoint',
+                xps: 'fa-solid fa-file-powerpoint',
+                potx: 'fa-solid fa-file-powerpoint',
             };
 
             if (extension && extensionTypes[extension.toLowerCase()] !== undefined) {
@@ -212,7 +212,7 @@ export default {
             }
 
             // blank file
-            return 'bi-file-earmark';
+            return 'fa-regular fa-file';
         },
     },
 };

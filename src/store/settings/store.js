@@ -77,69 +77,69 @@ export default {
                 [
                     {
                         name: 'open',
-                        icon: 'bi-folder2-open',
+                        icon: 'fa-regular fa-folder-open',
                     },
                     {
                         name: 'audioPlay',
-                        icon: 'bi-play',
+                        icon: 'fa-regular fa-play',
                     },
                     {
                         name: 'videoPlay',
-                        icon: 'bi-play',
+                        icon: 'fa-regular fa-play',
                     },
                     {
                         name: 'view',
-                        icon: 'bi-eye',
+                        icon: 'fa-solid fa-eye',
                     },
                     {
                         name: 'edit',
-                        icon: 'bi-pen',
+                        icon: 'fa-solid fa-pen',
                     },
                     {
                         name: 'select',
-                        icon: 'bi-check2',
+                        icon: 'fa-solid fa-check',
                     },
                     {
                         name: 'download',
-                        icon: 'bi-download',
+                        icon: 'fa-solid fa-download',
                     },
                 ],
                 [
                     {
                         name: 'copy',
-                        icon: 'bi-files',
+                        icon: 'fa-regular fa-copy',
                     },
                     {
                         name: 'cut',
-                        icon: 'bi-scissors',
+                        icon: 'fa-solid fa-scissors',
                     },
                     {
                         name: 'rename',
-                        icon: 'bi-pencil-square',
+                        icon: 'fa-regular fa-pen-to-square',
                     },
                     {
                         name: 'paste',
-                        icon: 'bi-clipboard',
+                        icon: 'fa-regular fa-paste',
                     },
                     {
                         name: 'zip',
-                        icon: 'bi-file-zip',
+                        icon: 'fa-solid fa-box-archive',
                     },
                     {
                         name: 'unzip',
-                        icon: 'bi-file-zip-fill',
+                        icon: 'fa-solid fa-box-open',
                     },
                 ],
                 [
                     {
                         name: 'delete',
-                        icon: 'bi-trash text-danger',
+                        icon: 'fa-regular fa-trash-can text-danger',
                     },
                 ],
                 [
                     {
                         name: 'properties',
-                        icon: 'bi-card-list',
+                        icon: 'fa-regular fa-rectangle-list',
                     },
                 ],
             ],

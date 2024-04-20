@@ -35,14 +35,14 @@
                 v-on:click="showModal('ClipboardModal')"
                 v-bind:title="[lang.clipboard.title + ' - ' + lang.clipboard[clipboardType]]"
             >
-                <i class="bi bi-clipboard"></i>
+                <i class="fa-regular fa-clipboard"></i>
             </span>
             <span
                 v-on:click="showModal('StatusModal')"
                 v-bind:class="[hasErrors ? 'text-danger' : 'text-success']"
                 v-bind:title="lang.modal.status.title"
             >
-                <i class="bi bi-info-circle-fill"></i>
+                <i class="fa-solid fa-circle-info"></i>
             </span>
         </div>
     </div>

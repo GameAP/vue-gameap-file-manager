@@ -10,7 +10,7 @@
                         v-bind:title="lang.btn.back"
                         v-on:click="historyBack()"
                     >
-                        <i class="bi bi-skip-backward-fill" />
+                        <i class="fa-solid fa-backward-fast"></i>
                     </button>
                     <button
                         type="button"
@@ -19,7 +19,7 @@
                         v-bind:title="lang.btn.forward"
                         v-on:click="historyForward()"
                     >
-                        <i class="bi bi-skip-forward-fill" />
+                        <i class="fa-solid fa-forward-fast"></i>
                     </button>
                     <button
                         type="button"
@@ -27,7 +27,7 @@
                         v-on:click="refreshAll()"
                         v-bind:title="lang.btn.refresh"
                     >
-                        <i class="bi bi-arrow-repeat"></i>
+                        <i class="fa-solid fa-rotate"></i>
                     </button>
                 </div>
                 <div class="btn-group mr-4" role="group">
@@ -37,7 +37,7 @@
                         v-on:click="showModal('NewFileModal')"
                         v-bind:title="lang.btn.file"
                     >
-                        <i class="bi bi-file-earmark"></i>
+                        <i class="fa-regular fa-file"></i>
                     </button>
                     <button
                         type="button"
@@ -45,7 +45,7 @@
                         v-on:click="showModal('NewFolderModal')"
                         v-bind:title="lang.btn.folder"
                     >
-                        <i class="bi bi-folder"></i>
+                        <i class="fa-regular fa-folder"></i>
                     </button>
                     <button
                         type="button"
@@ -54,7 +54,7 @@
                         v-if="uploading"
                         v-bind:title="lang.btn.upload"
                     >
-                        <i class="bi bi-upload"></i>
+                        <i class="fa-solid fa-upload"></i>
                     </button>
                     <button
                         type="button"
@@ -63,7 +63,7 @@
                         v-on:click="showModal('UploadModal')"
                         v-bind:title="lang.btn.upload"
                     >
-                        <i class="bi bi-upload"></i>
+                        <i class="fa-solid fa-upload"></i>
                     </button>
                     <button
                         type="button"
@@ -72,7 +72,7 @@
                         v-on:click="showModal('DeleteModal')"
                         v-bind:title="lang.btn.delete"
                     >
-                        <i class="bi bi-trash"></i>
+                        <i class="fa-regular fa-trash-can"></i>
                     </button>
                 </div>
                 <div class="btn-group mr-4" role="group">
@@ -83,7 +83,7 @@
                         v-bind:title="lang.btn.copy"
                         v-on:click="toClipboard('copy')"
                     >
-                        <i class="bi bi-files"></i>
+                        <i class="fa-regular fa-copy"></i>
                     </button>
                     <button
                         type="button"
@@ -92,7 +92,7 @@
                         v-bind:title="lang.btn.cut"
                         v-on:click="toClipboard('cut')"
                     >
-                        <i class="bi bi-scissors"></i>
+                        <i class="fa-solid fa-scissors"></i>
                     </button>
                     <button
                         type="button"
@@ -101,7 +101,7 @@
                         v-bind:title="lang.btn.paste"
                         v-on:click="paste"
                     >
-                        <i class="bi bi-clipboard"></i>
+                        <i class="fa-regular fa-paste"></i>
                     </button>
                 </div>
                 <div class="btn-group mr-4" role="group">
@@ -111,7 +111,7 @@
                         v-bind:title="lang.btn.hidden"
                         v-on:click="toggleHidden"
                     >
-                        <i class="bi" v-bind:class="[hiddenFiles ? 'bi-eye-fill' : 'bi-eye-slash-fill']" />
+                        <i class="fa-solid" v-bind:class="[hiddenFiles ? 'fa-eye' : 'fa-eye-slash']" />
                     </button>
                 </div>
             </div>
@@ -124,7 +124,7 @@
                         v-on:click="selectView('table')"
                         v-bind:title="lang.btn.table"
                     >
-                        <i class="bi bi-view-list"></i>
+                        <i class="fa-solid fa-list"></i>
                     </button>
                     <button
                         type="button"
@@ -133,7 +133,7 @@
                         v-on:click="selectView('grid')"
                         v-bind:title="lang.btn.grid"
                     >
-                        <i class="bi bi-grid"></i>
+                        <i class="fa-solid fa-grip"></i>
                     </button>
                 </div>
                 <div class="btn-group mr-4" role="group">
@@ -144,7 +144,7 @@
                         v-bind:class="{ active: fullScreen }"
                         v-on:click="screenToggle"
                     >
-                        <i class="bi bi-arrows-fullscreen"></i>
+                        <i class="fa-solid fa-maximize"></i>
                     </button>
                 </div>
                 <div class="btn-group mr-4" role="group">
@@ -154,7 +154,7 @@
                         v-bind:title="lang.btn.about"
                         v-on:click="showModal('AboutModal')"
                     >
-                        <i class="bi bi-question-lg"></i>
+                        <i class="fa-solid fa-question"></i>
                     </button>
                 </div>
             </div>

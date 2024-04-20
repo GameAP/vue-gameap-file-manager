@@ -1,10 +1,10 @@
 <template>
     <div class="fm-breadcrumb">
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb" class="flex px-5 py-3 text-stone-700 border border-stone-200 rounded-lg bg-stone-50 dark:bg-stone-800 dark:border-gray-700">
             <ol class="breadcrumb" v-bind:class="[manager === activeManager ? 'active-manager' : 'bg-light']">
                 <li class="breadcrumb-item" v-on:click="selectMainDirectory">
                     <span class="badge bg-secondary">
-                        <i class="bi bi-hdd"></i>
+                        <i class="fa-solid fa-hard-drive"></i>
                     </span>
                 </li>
                 <li
@@ -14,7 +14,10 @@
                     v-bind:class="[breadcrumb.length === index + 1 ? 'active' : '']"
                     v-on:click="selectDirectory(index)"
                 >
-                    <span>{{ item }}</span>
+                    <div class="flex items-center">
+                        <span class="mx-2 text-gray-400">/</span>
+                        <span>{{ item }}</span>
+                    </div>
                 </li>
             </ol>
         </nav>
@@ -90,12 +93,10 @@ export default {
 <style lang="scss">
 .fm-breadcrumb {
     .breadcrumb {
-        flex-wrap: nowrap;
-        padding: 0.2rem 0.3rem;
-        margin-bottom: 0.5rem;
+        @apply inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse;
 
-        &.active-manager {
-            background-color: #cff4fc;
+        .breadcrumb-item {
+            @apply inline-flex items-center;
         }
 
         .breadcrumb-item:not(.active):hover {

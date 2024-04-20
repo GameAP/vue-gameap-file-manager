@@ -6,29 +6,29 @@
                     <th class="w-65" v-on:click="sortBy('name')">
                         {{ lang.manager.table.name }}
                         <template v-if="sortSettings.field === 'name'">
-                            <i class="bi bi-sort-down" v-show="sortSettings.direction === 'down'" />
-                            <i class="bi bi-sort-up" v-show="sortSettings.direction === 'up'" />
+                            <i class="fa-solid fa-arrow-down-wide-short" v-show="sortSettings.direction === 'down'" />
+                            <i class="fa-solid fa-arrow-up-wide-short" v-show="sortSettings.direction === 'up'" />
                         </template>
                     </th>
                     <th class="w-10" v-on:click="sortBy('size')">
                         {{ lang.manager.table.size }}
                         <template v-if="sortSettings.field === 'size'">
-                            <i class="bi bi-sort-down" v-show="sortSettings.direction === 'down'" />
-                            <i class="bi bi-sort-up" v-show="sortSettings.direction === 'up'" />
+                            <i class="fa-solid fa-arrow-down-wide-short" v-show="sortSettings.direction === 'down'" />
+                            <i class="fa-solid fa-arrow-up-wide-short" v-show="sortSettings.direction === 'up'" />
                         </template>
                     </th>
                     <th class="w-10" v-on:click="sortBy('type')">
                         {{ lang.manager.table.type }}
                         <template v-if="sortSettings.field === 'type'">
-                            <i class="bi bi-sort-down" v-show="sortSettings.direction === 'down'" />
-                            <i class="bi bi-sort-up" v-show="sortSettings.direction === 'up'" />
+                            <i class="fa-solid fa-arrow-down-wide-short" v-show="sortSettings.direction === 'down'" />
+                            <i class="fa-solid fa-arrow-up-wide-short" v-show="sortSettings.direction === 'up'" />
                         </template>
                     </th>
                     <th class="w-auto" v-on:click="sortBy('date')">
                         {{ lang.manager.table.date }}
                         <template v-if="sortSettings.field === 'date'">
-                            <i class="bi bi-sort-down" v-show="sortSettings.direction === 'down'" />
-                            <i class="bi bi-sort-up" v-show="sortSettings.direction === 'up'" />
+                            <i class="fa-solid fa-arrow-down-wide-short" v-show="sortSettings.direction === 'down'" />
+                            <i class="fa-solid fa-arrow-up-wide-short" v-show="sortSettings.direction === 'up'" />
                         </template>
                     </th>
                 </tr>
@@ -36,7 +36,7 @@
             <tbody>
                 <tr v-if="!isRootPath">
                     <td colspan="4" class="fm-content-item" v-on:click="levelUp">
-                        <i class="bi bi-arrow-90deg-up" />
+                        <i class="fa-solid fa-arrow-turn-up"></i>
                     </td>
                 </tr>
                 <tr
@@ -51,7 +51,7 @@
                         v-bind:class="acl && directory.acl === 0 ? 'text-hidden' : ''"
                         v-on:dblclick="selectDirectory(directory.path)"
                     >
-                        <i class="bi bi-folder"></i> {{ directory.basename }}
+                        <i class="fa-regular fa-folder"></i> {{ directory.basename }}
                     </td>
                     <td />
                     <td>{{ lang.manager.table.folder }}</td>
@@ -68,7 +68,7 @@
                     v-on:contextmenu.prevent="contextMenu(file, $event)"
                 >
                     <td class="fm-content-item unselectable" v-bind:class="acl && file.acl === 0 ? 'text-hidden' : ''">
-                        <i class="bi" v-bind:class="extensionToIcon(file.extension)" />
+                        <i v-bind:class="extensionToIcon(file.extension)" />
                         {{ file.basename }}
                     </td>
                     <td>{{ bytesToHuman(file.size) }}</td>

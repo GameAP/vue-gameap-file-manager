@@ -47,7 +47,7 @@
                             type="button"
                             class="btn btn-block btn-sm btn-info mb-2"
                         >
-                            <i class="bi bi-check-lg"></i>
+                            <i class="fa-solid fa-check"></i>
                         </button>
                     </div>
                 </div>
@@ -57,40 +57,40 @@
             <div>
                 <div class="btn-group me-2" role="group" aria-label="Scale">
                     <button v-on:click="cropMove(-10, 0)" type="button" class="btn btn-info">
-                        <i class="bi bi-arrow-left"></i>
+                        <i class="fa-solid fa-arrow-left"></i>
                     </button>
                     <button v-on:click="cropMove(10, 0)" type="button" class="btn btn-info">
-                        <i class="bi bi-arrow-right"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </button>
                     <button v-on:click="cropMove(0, -10)" type="button" class="btn btn-info">
-                        <i class="bi bi-arrow-up"></i>
+                        <i class="fa-solid fa-arrow-up"></i>
                     </button>
                     <button v-on:click="cropMove(0, 10)" type="button" class="btn btn-info">
-                        <i class="bi bi-arrow-down"></i>
+                        <i class="fa-solid fa-arrow-down"></i>
                     </button>
                 </div>
                 <div class="btn-group me-2" role="group" aria-label="Scale">
                     <button v-on:click="cropScaleX()" type="button" class="btn btn-info">
-                        <i class="bi bi-arrow-left-right"></i>
+                        <i class="fa-solid fa-arrows-left-right"></i>
                     </button>
                     <button v-on:click="cropScaleY()" type="button" class="btn btn-info">
-                        <i class="bi bi-arrow-down-up"></i>
+                        <i class="fa-solid fa-arrows-up-down"></i>
                     </button>
                 </div>
                 <div class="btn-group me-2" role="group" aria-label="Rotate">
                     <button v-on:click="cropRotate(-45)" type="button" class="btn btn-info">
-                        <i class="bi bi-arrow-counterclockwise"></i>
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
                     </button>
                     <button v-on:click="cropRotate(45)" type="button" class="btn btn-info">
-                        <i class="bi bi-arrow-clockwise"></i>
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
                     </button>
                 </div>
                 <div class="btn-group me-2" role="group" aria-label="Rotate">
                     <button v-on:click="cropZoom(0.1)" type="button" class="btn btn-info">
-                        <i class="bi bi-plus-circle"></i>
+                        <i class="fa-regular fa-circle-plus"></i>
                     </button>
                     <button v-on:click="cropZoom(-0.1)" type="button" class="btn btn-info">
-                        <i class="bi bi-dash-circle"></i>
+                        <i class="fa-regular fa-circle-minus"></i>
                     </button>
                 </div>
                 <button
@@ -99,7 +99,7 @@
                     type="button"
                     class="btn btn-info me-2"
                 >
-                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="fa-solid fa-rotate"></i>
                 </button>
                 <button
                     v-on:click="cropSave()"
@@ -107,7 +107,7 @@
                     type="button"
                     class="btn btn-danger me-2"
                 >
-                    <i class="bi bi-save"></i>
+                    <i class="fa-regular fa-floppy-disk"></i>
                 </button>
             </div>
             <span class="d-block">

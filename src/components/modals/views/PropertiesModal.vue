@@ -3,7 +3,7 @@
         <div class="modal-header grid grid-cols-2">
             <h5 class="modal-title">{{ lang.modal.properties.title }}</h5>
             <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
-                <i class="bi bi-x-lg"></i>
+                <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
         <div class="modal-body">
@@ -14,7 +14,7 @@
                     <i
                         v-on:click="copyToClipboard(selectedDisk)"
                         v-bind:title="lang.clipboard.copy"
-                        class="bi bi-files"
+                        class="fa-regular fa-copy"
                     />
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <i
                         v-on:click="copyToClipboard(selectedItem.basename)"
                         v-bind:title="lang.clipboard.copy"
-                        class="bi bi-files"
+                        class="fa-regular fa-copy"
                     />
                 </div>
             </div>
@@ -36,7 +36,7 @@
                     <i
                         v-on:click="copyToClipboard(selectedItem.path)"
                         v-bind:title="lang.clipboard.copy"
-                        class="bi bi-files"
+                        class="fa-regular fa-copy"
                     />
                 </div>
             </div>
@@ -48,7 +48,7 @@
                         <i
                             v-on:click="copyToClipboard(bytesToHuman(selectedItem.size))"
                             v-bind:title="lang.clipboard.copy"
-                            class="bi bi-files"
+                            class="fa-regular fa-copy"
                         />
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                         <i
                             v-on:click="copyToClipboard(timestampToDate(selectedItem.timestamp))"
                             v-bind:title="lang.clipboard.copy"
-                            class="bi bi-files"
+                            class="fa-regular fa-copy"
                         />
                     </div>
                 </div>
@@ -158,17 +158,8 @@ export default {
         padding-top: 0.3rem;
         padding-bottom: 0.3rem;
 
-        .bi-files {
-            display: none;
-            cursor: pointer;
-        }
-
         &:hover {
             background-color: #f8f9fa;
-
-            & .bi-files {
-                display: block;
-            }
         }
     }
 }

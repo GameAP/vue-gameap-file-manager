@@ -3,7 +3,7 @@
         <div class="d-flex align-content-start flex-wrap">
             <div v-if="!isRootPath" v-on:click="levelUp" class="fm-grid-item text-center">
                 <div class="fm-item-icon">
-                    <i class="bi bi-arrow-90deg-up pb-2" />
+                    <i class="fa-solid fa-arrow-turn-up pb-2"></i>
                 </div>
                 <div class="fm-item-info"><strong>..</strong></div>
             </div>
@@ -19,7 +19,7 @@
                 v-on:contextmenu.prevent="contextMenu(directory, $event)"
             >
                 <div class="fm-item-icon">
-                    <i class="bi pb-2" v-bind:class="acl && directory.acl === 0 ? 'bi-lock' : 'bi-folder'" />
+                    <i class="fa-regular pb-2" v-bind:class="acl && directory.acl === 0 ? 'fa-lock' : 'fa-folder'" />
                 </div>
                 <div class="fm-item-info">{{ directory.basename }}</div>
             </div>
@@ -35,9 +35,9 @@
                 v-on:contextmenu.prevent="contextMenu(file, $event)"
             >
                 <div class="fm-item-icon">
-                    <i v-if="acl && file.acl === 0" class="bi bi-file-earmark-lock pb-2" />
+                    <i v-if="acl && file.acl === 0" class="fa-solid fa-file-circle-xmark pb-2" />
                     <thumbnail v-else-if="thisImage(file.extension)" v-bind:disk="disk" v-bind:file="file"></thumbnail>
-                    <i v-else class="bi pb-2" v-bind:class="extensionToIcon(file.extension)" />
+                    <i v-else class="pb-2" v-bind:class="extensionToIcon(file.extension)" />
                 </div>
                 <div class="fm-item-info">
                     {{ `${file.filename}.${file.extension}` }}

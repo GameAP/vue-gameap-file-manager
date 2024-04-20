@@ -6,7 +6,7 @@
                 <small class="text-muted pl-3">{{ selectedItem.basename }}</small>
             </h5>
             <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal">
-                <i class="bi bi-x-lg"></i>
+                <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
         <div class="modal-body">

@@ -7,7 +7,7 @@
                     v-on:click="selectDisk(disk)"
                     v-bind:class="[disk === selectedDisk ? 'bg-secondary' : 'bg-light text-dark']"
                 >
-                    <i class="bi bi-hdd"></i> {{ disk }}
+                    <i class="fa-solid fa-hard-drive"></i> {{ disk }}
                 </span>
             </li>
         </ul>
