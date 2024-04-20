@@ -57,7 +57,11 @@ export default {
         if (Object.keys(state.headers).length === 0) {
             // off laravel csrf-token if need
             if (import.meta.env.VITE_APP_LFM_CSRF_TOKEN === 'OFF' || import.meta.env.VITE_LFM_CSRF_TOKEN === 'OFF') {
-                state.headers = { 'X-Requested-With': 'XMLHttpRequest', 'Access-Control-Allow-Origin': '*' };
+                state.headers = {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Access-Control-Allow-Origin': '*',
+                    'Authorization': 'Bearer 1|nk9wa8TKjUfiioeDQ3ask6YN7ZlTimONOdCBHmLb'
+                };
             } else {
                 // Laravel CSRF token
                 const token = document.head.querySelector('meta[name="csrf-token"]');
@@ -66,6 +70,8 @@ export default {
                     state.headers = {
                         'X-Requested-With': 'XMLHttpRequest',
                         'Access-Control-Allow-Origin': '*',
+                        'Authorization': 'Bearer 1|nk9wa8TKjUfiioeDQ3ask6YN7ZlTimONOdCBHmLb',
+                        'Cookie': 'gameap_session=eyJpdiI6InZDOFNoeWtaSDFjVmNUOXlHL2JtOFE9PSIsInZhbHVlIjoiMVE1ZEVZNnh3Q0tPQWdnZDQzc2tkbzBqandXRit1aU9la0lzNVRKanBCd21XdHIwcWRDM0lzYWloTnlrUjdNL21ZSDdKcXBwZXFRTnpiYS9WYkFTemJWWGoxRytaZ2JDRXk3cUY3NmF6T0tvZmU2TUJxcEpaREtRNXJNK01HcUUiLCJtYWMiOiJkODBmZTIwZmMyYzYxMmEzMTZiYWM3NzE2ZjdlMmU3MWVkMjgxYWY0M2VmYjBjYzFjMDkyZmEwMWFhZGYwZjE5IiwidGFnIjoiIn0%3D;',
                     };
                     // eslint-disable-next-line
                     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
@@ -74,6 +80,7 @@ export default {
                         'X-Requested-With': 'XMLHttpRequest',
                         'X-CSRF-TOKEN': token.content,
                         'Access-Control-Allow-Origin': '*',
+                        'Authorization': 'Bearer 1|nk9wa8TKjUfiioeDQ3ask6YN7ZlTimONOdCBHmLb'
                     };
                 }
             }
